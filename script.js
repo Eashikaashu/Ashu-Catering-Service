@@ -125,11 +125,11 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
   const hideCookingLoader = () => {
     const loader = document.getElementById('cooking-loader');
     if (!loader) return;
-    window.setTimeout(() => loader.classList.add('is-hidden'), 1000);
-    window.setTimeout(() => loader.remove(), 1350);
+    window.setTimeout(() => loader.classList.add('is-hidden'), 500);
+    window.setTimeout(() => loader.remove(), 750);
   };
   if (document.readyState === 'complete') hideCookingLoader();
   else window.addEventListener('load', hideCookingLoader, { once: true });
   // Fallback for slow image/network loads.
-  window.setTimeout(hideCookingLoader, 1000);
+  window.setTimeout(hideCookingLoader, 500);
 })();
