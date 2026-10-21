@@ -290,25 +290,25 @@ body.inner-page .site-header .nav-cta:hover {
 }
 
 
-/* Brief 1-second cooking-inspired page loader */
+/* Minimal monochrome cooking loader, visible for 0.5 seconds */
 .cooking-loader {
   position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 22px;
-  background: #eaf7fc; color: #075276;
-  opacity: 1; visibility: visible; transition: opacity .25s ease, visibility .25s ease;
+  align-items: center; justify-content: center; gap: 18px;
+  background: #fff; color: #111;
+  opacity: 1; visibility: visible; transition: opacity .16s ease, visibility .16s ease;
 }
 .cooking-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 .loader-pot { width: 76px; height: 64px; position: relative; }
-.pot-body { position:absolute; bottom:0; left:9px; width:58px; height:34px; border-radius: 7px 7px 18px 18px; background:#087fb0; border:3px solid #075276; }
-.pot-body::before, .pot-body::after { content:""; position:absolute; top:8px; width:9px; height:5px; border-radius:4px; background:#075276; }
+.pot-body { position:absolute; bottom:0; left:9px; width:58px; height:34px; border-radius: 7px 7px 18px 18px; background:#111; border:3px solid #111; }
+.pot-body::before, .pot-body::after { content:""; position:absolute; top:8px; width:9px; height:5px; border-radius:4px; background:#111; }
 .pot-body::before { left:-11px; } .pot-body::after { right:-11px; }
-.pot-lid { position:absolute; z-index:2; top:23px; left:7px; width:62px; height:8px; border-radius:50%; background:#7bd5f4; border:2px solid #075276; animation: lid-bob .5s ease-in-out infinite alternate; }
-.pot-lid::after { content:""; position:absolute; width:12px; height:5px; top:-6px; left:23px; border-radius:5px; background:#075276; }
-.steam { position:absolute; top:0; width:7px; height:19px; border-radius:50%; border-left:3px solid #27a9dc; opacity:0; animation: steam-rise .8s ease-in-out infinite; }
-.steam-one { left:20px; animation-delay:0s; } .steam-two { left:36px; animation-delay:.2s; } .steam-three { left:52px; animation-delay:.4s; }
-.cooking-loader p { margin:0; font-size:14px; font-weight:700; letter-spacing:.08em; text-align:center; }
-.loader-dots { display:inline-block; width:18px; overflow:hidden; vertical-align:bottom; animation: dots 1s steps(4,end) infinite; }
+.pot-lid { position:absolute; z-index:2; top:23px; left:7px; width:62px; height:8px; border-radius:50%; background:#fff; border:2px solid #111; animation: lid-bob .3s ease-in-out infinite alternate; }
+.pot-lid::after { content:""; position:absolute; width:12px; height:5px; top:-6px; left:23px; border-radius:5px; background:#111; }
+.steam { position:absolute; top:0; width:7px; height:19px; border-radius:50%; border-left:3px solid #111; opacity:0; animation: steam-rise .45s ease-in-out infinite; }
+.steam-one { left:20px; animation-delay:0s; } .steam-two { left:36px; animation-delay:.12s; } .steam-three { left:52px; animation-delay:.24s; }
+.cooking-loader p { margin:0; font-size:13px; font-weight:700; letter-spacing:.06em; text-align:center; color:#111; }
+.loader-dots { display:inline-block; width:18px; overflow:hidden; vertical-align:bottom; animation: dots .5s steps(4,end) infinite; }
 @keyframes steam-rise { 0% { transform:translateY(8px) scale(.7); opacity:0; } 40% { opacity:1; } 100% { transform:translateY(-8px) scale(1.1); opacity:0; } }
-@keyframes lid-bob { to { transform:translateY(-3px) rotate(-3deg); } }
+@keyframes lid-bob { to { transform:translateY(-2px) rotate(-2deg); } }
 @keyframes dots { from { width:0; } to { width:18px; } }
 @media (prefers-reduced-motion: reduce) { .steam, .pot-lid, .loader-dots { animation:none; } .steam { opacity:.5; } }
