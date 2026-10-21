@@ -47,3 +47,74 @@ if ("IntersectionObserver" in window && sections.length && navLinks.length) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+
+/* Hero food-photo slideshow */
+const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
+const slideDots = Array.from(document.querySelectorAll(".slide-dot"));
+const previousSlide = document.querySelector(".slide-prev");
+const nextSlide = document.querySelector(".slide-next");
+const heroSlideshow = document.querySelector(".hero-slideshow");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let currentSlide = 0;
+let slideshowTimer;
+
+function showHeroSlide(index) {
+  if (!heroSlides.length) return;
+  currentSlide = (index + heroSlides.length) % heroSlides.length;
+  heroSlides.forEach((slide, i) => slide.classList.toggle("is-active", i === currentSlide));
+  slideDots.forEach((dot, i) => {
+    dot.classList.toggle("is-active", i === currentSlide);
+    dot.setAttribute("aria-pressed", String(i === currentSlide));
+  });
+}
+
+function stopHeroSlideshow() {
+  window.clearInterval(slideshowTimer);
+}
+
+function startHeroSlideshow() {
+  stopHeroSlideshow();
+  if (heroSlides.length > 1 && !reduceMotion.matches && !document.hidden) {
+    slideshowTimer = window.setInterval(() => showHeroSlide(currentSlide + 1), 5500);
+  }
+}
+
+if (heroSlides.length) {
+  slideDots.forEach((dot, i) => dot.addEventListener("click", () => {
+    showHeroSlide(i);
+    startHeroSlideshow();
+  }));
+  previousSlide?.addEventListener("click", () => {
+    showHeroSlide(currentSlide - 1);
+    startHeroSlideshow();
+  });
+  nextSlide?.addEventListener("click", () => {
+    showHeroSlide(currentSlide + 1);
+    startHeroSlideshow();
+  });
+  heroSlideshow?.addEventListener("mouseenter", stopHeroSlideshow);
+  heroSlideshow?.addEventListener("mouseleave", startHeroSlideshow);
+  heroSlideshow?.addEventListener("focusin", stopHeroSlideshow);
+  heroSlideshow?.addEventListener("focusout", startHeroSlideshow);
+  document.addEventListener("visibilitychange", startHeroSlideshow);
+  reduceMotion.addEventListener?.("change", startHeroSlideshow);
+  startHeroSlideshow();
+}
+
+/* Reveal content as sections enter the viewport. */
+if ("IntersectionObserver" in window && !reduceMotion.matches) {
+  const revealTargets = document.querySelectorAll(
+    ".intro-visual, .intro-copy, .section-heading, .service-card, .quote-band > *, .gallery-item, .contact-text, .contact-action"
+  );
+  revealTargets.forEach((item) => item.classList.add("reveal-ready"));
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-revealed");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+  revealTargets.forEach((item) => revealObserver.observe(item));
+}
