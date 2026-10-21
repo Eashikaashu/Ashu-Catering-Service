@@ -539,3 +539,18 @@ img, iframe { max-width: 100%; }
 .experience-copy h2 em { color: var(--rust); }
 .experience-copy > p:not(.eyebrow) { max-width: 590px; margin: 0 0 24px; color: var(--muted); font-size: 15px; line-height: 1.9; }
 @media (max-width: 760px) { .experience-section { grid-template-columns: 1fr; gap: 0; padding: 28px 6% 48px; } .experience-image { height: clamp(250px, 68vw, 370px); } .experience-copy { padding: 30px 4px 8px; } .experience-copy h2 { font-size: clamp(32px, 8vw, 42px); } .experience-copy > p:not(.eyebrow) { font-size: 14px; } }
+
+
+/* Facebook links on the homepage and gallery */
+.facebook-link { display: inline-flex; align-items: center; gap: 10px; color: #075276; font-size: 13px; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(7,82,118,.35); padding: 9px 0; transition: color .2s ease, border-color .2s ease; }
+.facebook-link:hover, .facebook-link:focus-visible { color: #1685d1; border-color: currentColor; }
+.facebook-link svg { display: block; width: 22px; height: 22px; flex: 0 0 22px; }
+.facebook-home { margin: 18px auto 0; color: #bcecff; border-color: rgba(188,236,255,.45); }
+.facebook-home:hover, .facebook-home:focus-visible { color: #fff; }
+.facebook-gallery-callout { display: grid; grid-template-columns: 66px minmax(0,1fr); align-items: start; gap: 22px; margin: 32px 0 20px; padding: clamp(24px,4vw,42px); background: #edf7fb; border-left: 3px solid #1685d1; }
+.facebook-callout-icon { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; color: white; background: #1877f2; }
+.facebook-callout-icon svg { width: 30px; height: 30px; }
+.facebook-gallery-callout .eyebrow { margin: 0 0 10px; }
+.facebook-gallery-callout h2 { margin: 0 0 12px; color: var(--ink); font: 400 clamp(25px,3vw,36px)/1.2 var(--serif); }
+.facebook-gallery-callout > div:last-child > p:not(.eyebrow) { max-width: 680px; margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+@media(max-width:600px) { .facebook-gallery-callout { grid-template-columns: 1fr; gap: 14px; padding: 24px 20px; } .facebook-callout-icon { width: 48px; height: 48px; } }
