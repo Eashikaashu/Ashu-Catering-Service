@@ -554,3 +554,10 @@ img, iframe { max-width: 100%; }
 .facebook-gallery-callout h2 { margin: 0 0 12px; color: var(--ink); font: 400 clamp(25px,3vw,36px)/1.2 var(--serif); }
 .facebook-gallery-callout > div:last-child > p:not(.eyebrow) { max-width: 680px; margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 @media(max-width:600px) { .facebook-gallery-callout { grid-template-columns: 1fr; gap: 14px; padding: 24px 20px; } .facebook-callout-icon { width: 48px; height: 48px; } }
+
+
+/* Mobile fix: keep the Facebook mark compact inside its footer link */
+.site-footer a.facebook-link.facebook-home { display: inline-flex; width: max-content; max-width: 100%; align-items: center; justify-content: center; gap: 9px; margin: 18px auto 0; font-size: 13px; line-height: 1.4; }
+.site-footer a.facebook-link.facebook-home > svg { display: block !important; width: 22px !important; min-width: 22px !important; max-width: 22px !important; height: 22px !important; min-height: 22px !important; max-height: 22px !important; flex: 0 0 22px !important; }
+.site-footer a.facebook-link.facebook-home > span { display: inline; width: auto; font-size: inherit; line-height: inherit; }
+@media (max-width: 600px) { .site-footer a.facebook-link.facebook-home { margin-top: 18px; font-size: 13px; } .site-footer a.facebook-link.facebook-home > svg { width: 22px !important; height: 22px !important; flex-basis: 22px !important; } }
