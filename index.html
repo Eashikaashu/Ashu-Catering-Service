@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#241711">
+  <meta name="theme-color" content="#075276">
   <meta name="description" content="Ashu Catering Service brings people together with memorable food, thoughtful presentation and friendly service across Matara, Galle and Colombo.">
   <title>Ashu Catering Service | Memorable food, beautifully served</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,12 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-image" role="img" aria-label="An inviting, beautifully prepared catering buffet"></div>
+      <div class="hero-slideshow" aria-label="Food photography slideshow">
+        <div class="hero-slide is-active" style="--slide-image:url('https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=2400&q=90')" role="img" aria-label="Beautifully prepared dishes"></div>
+        <div class="hero-slide" style="--slide-image:url('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=2400&q=90')" role="img" aria-label="A colourful catered buffet"></div>
+        <div class="hero-slide" style="--slide-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2400&q=90')" role="img" aria-label="Elegant event dining setup"></div>
+        <div class="hero-slide" style="--slide-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=90')" role="img" aria-label="An elegant dining experience"></div>
+      </div>
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow light"><span class="eyebrow-line"></span> Good food. Beautiful moments.</p>
@@ -47,6 +52,16 @@
       <div class="hero-footer">
         <p>MATARA · GALLE · COLOMBO</p>
         <div class="hero-note"><span class="note-dot"></span> Made with care, served with pride</div>
+      </div>
+      <div class="hero-controls" aria-label="Slideshow controls">
+        <button class="slide-arrow slide-prev" type="button" aria-label="Previous food photo">←</button>
+        <div class="slide-dots" role="group" aria-label="Choose hero photo">
+          <button class="slide-dot is-active" type="button" aria-label="Show photo 1" aria-pressed="true"></button>
+          <button class="slide-dot" type="button" aria-label="Show photo 2" aria-pressed="false"></button>
+          <button class="slide-dot" type="button" aria-label="Show photo 3" aria-pressed="false"></button>
+          <button class="slide-dot" type="button" aria-label="Show photo 4" aria-pressed="false"></button>
+        </div>
+        <button class="slide-arrow slide-next" type="button" aria-label="Next food photo">→</button>
       </div>
       <a class="scroll-cue" href="#about" aria-label="Scroll to about us"><span></span></a>
     </section>
