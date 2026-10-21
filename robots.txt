@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eashikaashu.github.io/Ashu-Catering-Service/sitemap.xml
