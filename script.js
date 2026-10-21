@@ -120,6 +120,19 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
 }
 
 
+// Hide the short blue circular loader used on inner pages.
+(() => {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+  const hideLoader = () => {
+    window.setTimeout(() => loader.classList.add('is-hidden'), 500);
+    window.setTimeout(() => loader.remove(), 650);
+  };
+  if (document.readyState === 'complete') hideLoader();
+  else window.addEventListener('load', hideLoader, { once: true });
+  window.setTimeout(hideLoader, 500);
+})();
+
 // Show the delivery-truck splash screen only on the homepage, where its markup exists.
 (() => {
   const loader = document.getElementById('cooking-loader');
