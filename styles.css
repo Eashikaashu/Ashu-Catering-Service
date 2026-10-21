@@ -440,3 +440,12 @@ body.inner-page .page-lead { color: rgba(255,255,255,.9); max-width: 620px; }
 @media (prefers-reduced-motion: reduce) {
   .occasion-card img, .occasion-shade { transition: none; }
 }
+
+
+/* Footer creator credit */
+.site-footer .site-credit { margin: 22px 0 0; color: rgba(255,255,255,.58); font: 10px/1.8 var(--sans); letter-spacing: .04em; }
+.site-credit .credit-heart { display: inline-block; padding: 0 3px; color: #ff5576; font-size: 15px; animation: heart-beat 1.5s ease-in-out infinite; }
+.site-credit a { color: #bcecff; text-decoration: underline; text-decoration-color: rgba(188,236,255,.55); text-underline-offset: 3px; transition: color .2s; }
+.site-credit a:hover { color: #fff; }
+@keyframes heart-beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.18); } 24% { transform: scale(1); } 36% { transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .site-credit .credit-heart { animation: none; } }
