@@ -130,7 +130,7 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
   };
   if (document.readyState === 'complete') hideLoader();
   else window.addEventListener('load', hideLoader, { once: true });
-  window.setTimeout(hideLoader, 500);
+  window.setTimeout(hideLoader, 250);
 })();
 
 // Show the delivery-truck splash screen only on the homepage, where its markup exists.
