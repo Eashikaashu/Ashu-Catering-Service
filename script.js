@@ -118,3 +118,18 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
   }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
   revealTargets.forEach((item) => revealObserver.observe(item));
 }
+
+
+// Keep the cooking splash screen brief (about one second).
+(() => {
+  const hideCookingLoader = () => {
+    const loader = document.getElementById('cooking-loader');
+    if (!loader) return;
+    window.setTimeout(() => loader.classList.add('is-hidden'), 1000);
+    window.setTimeout(() => loader.remove(), 1350);
+  };
+  if (document.readyState === 'complete') hideCookingLoader();
+  else window.addEventListener('load', hideCookingLoader, { once: true });
+  // Fallback for slow image/network loads.
+  window.setTimeout(hideCookingLoader, 1000);
+})();
