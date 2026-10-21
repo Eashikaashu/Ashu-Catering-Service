@@ -245,3 +245,26 @@ h1 em { color: #b8eaff; }
  .gallery-page-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
  .gallery-page-grid img { height: 190px; }
 }
+
+
+/* Inner pages use a solid ocean-blue header so navigation stays readable. */
+body.inner-page .site-header {
+  position: relative;
+  background: #075276;
+  color: #f5fbff;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+body.inner-page .page-hero {
+  padding-top: clamp(70px, 8vw, 112px);
+}
+body.inner-page .site-header .brand-mark {
+  border-color: #80d8f8;
+  color: #c7f0ff;
+}
+body.inner-page .site-header .nav-link:not(.nav-cta)::after {
+  background: #bcecff;
+}
+body.inner-page .site-header .nav-cta:hover {
+  background: #e8f7fd;
+  color: #075276;
+}
