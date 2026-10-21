@@ -516,3 +516,14 @@ img, iframe { max-width: 100%; }
   .experience-copy > p:not(.eyebrow) { font-size: 14px; }
 }
 @media (max-width: 380px) { .experience-image, .experience-image img { height: 260px; } }
+
+
+/* Full-bleed chef image experience section on the homepage */
+.experience-section { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; min-height: clamp(500px, 58vw, 760px); padding: clamp(65px, 9vw, 130px) 7%; overflow: hidden; background-color: #1c2527; background-image: var(--experience-image); background-size: cover; background-position: center 42%; }
+.experience-shade { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(10,18,20,.60), rgba(10,18,20,.30) 55%, rgba(10,18,20,.48)), linear-gradient(0deg, rgba(8,14,15,.35), transparent 65%); }
+.experience-copy { display: flex; flex-direction: column; align-items: center; justify-content: center; width: min(100%, 850px); padding: 36px 20px; color: #fff; text-align: center; }
+.experience-copy .eyebrow { justify-content: center; margin-bottom: 22px; }
+.experience-copy h2 { margin: 0 0 24px; color: #fff; font-size: clamp(38px, 5.5vw, 76px); line-height: 1.12; text-wrap: balance; }
+.experience-copy h2 em { color: #f4c9a6; }
+.experience-copy > p:not(.eyebrow) { max-width: 700px; margin: 0 0 30px; color: rgba(255,255,255,.92); font-size: clamp(14px, 1.25vw, 17px); line-height: 1.95; }
+@media (max-width: 680px) { .experience-section { min-height: 540px; padding: 68px 6%; background-position: 52% center; } .experience-shade { background: linear-gradient(0deg, rgba(9,17,19,.78), rgba(9,17,19,.43)); } .experience-copy { padding: 24px 0; } .experience-copy h2 { font-size: clamp(34px, 9vw, 48px); } .experience-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.8; } }
