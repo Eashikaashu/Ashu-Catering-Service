@@ -120,19 +120,12 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
 }
 
 
-// Keep the delivery-truck splash screen brief.
+// Show the delivery-truck splash screen only on the homepage, where its markup exists.
 (() => {
+  const loader = document.getElementById('cooking-loader');
+  if (!loader) return;
+
   const hideCookingLoader = () => {
-    let loader = document.getElementById('cooking-loader');
-    if (!loader) {
-      loader = document.createElement('div');
-      loader.className = 'cooking-loader';
-      loader.id = 'cooking-loader';
-      loader.setAttribute('role', 'status');
-      loader.setAttribute('aria-label', 'Loading Ashu Catering Service');
-      loader.innerHTML = '<div class="truck-road"><div class="loader-truck" aria-hidden="true"><svg viewBox="0 0 120 64"><path d="M7 12h65v36H7zM72 25h22l17 16v7H72z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M82 29h10l12 12H82z" fill="#fff" stroke="#111" stroke-width="2" stroke-linejoin="round"/><path d="M15 20h49v19H15z" fill="#111"/><path d="M22 26h35M22 32h25" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="27" cy="49" r="9" fill="#fff" stroke="#111" stroke-width="4"/><circle cx="91" cy="49" r="9" fill="#fff" stroke="#111" stroke-width="4"/><circle cx="27" cy="49" r="3" fill="#111"/><circle cx="91" cy="49" r="3" fill="#111"/></svg></div><span class="road-line"></span></div><p>On the way with something delicious<span class="loader-dots">...</span></p>';
-      document.body.prepend(loader);
-    }
     window.setTimeout(() => loader.classList.add('is-hidden'), 500);
     window.setTimeout(() => loader.remove(), 750);
   };
