@@ -15,7 +15,12 @@ No build tools are required.
 
 ## Files
 
-- `index.html` — homepage sections and content
+- `index.html` — homepage hero slideshow and welcome section
+- `about.html` — separate About Us page
+- `services.html` — catering services page
+- `menus.html` — menu categories and quotation enquiry
+- `gallery.html` — food and event gallery
+- `contact.html` — contact details and WhatsApp enquiry
 - `styles.css` — responsive styling, typography and layouts
 - `script.js` — mobile navigation, active navigation state and current footer year
 
