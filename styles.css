@@ -272,21 +272,24 @@ body.inner-page .site-header .nav-cta:hover {
 
 /* Homepage brand-first hero headline */
 .hero h1 {
-  max-width: 1120px;
-  font-size: clamp(62px, 8.4vw, 124px);
-  line-height: 1.04;
-  letter-spacing: -.045em;
+  max-width: none;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+  font-size: clamp(34px, 5.5vw, 78px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
   text-transform: uppercase;
 }
 .hero-copy {
   max-width: 650px;
-  font-size: clamp(18px, 1.8vw, 25px);
+  font-size: clamp(16px, 1.5vw, 21px);
   line-height: 1.6;
-  letter-spacing: .035em;
+  letter-spacing: .025em;
 }
 @media (max-width: 600px) {
-  .hero h1 { font-size: clamp(43px, 11vw, 66px); }
-  .hero-copy { font-size: 17px; }
+  .hero h1 { font-size: clamp(21px, 6.2vw, 36px); letter-spacing: -.045em; }
+  .hero-copy { font-size: 15px; }
 }
 
 
