@@ -147,3 +147,46 @@ if ("IntersectionObserver" in window && !reduceMotion.matches) {
   // Fallback for slow image/network loads.
   window.setTimeout(hideCookingLoader, 500);
 })();
+
+
+// Gallery lightbox: open an image for a larger view and close with Escape/backdrop.
+(() => {
+  const dialog = document.querySelector(".gallery-lightbox");
+  if (!dialog) return;
+  const dialogImage = dialog.querySelector("img");
+  const closeButton = dialog.querySelector(".lightbox-close");
+  document.querySelectorAll(".gallery-photo").forEach((button) => {
+    button.addEventListener("click", () => {
+      const image = button.querySelector("img");
+      if (!image) return;
+      dialogImage.src = image.currentSrc || image.src;
+      dialogImage.alt = image.alt;
+      if (typeof dialog.showModal === "function") dialog.showModal();
+    });
+  });
+  closeButton?.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+})();
+
+// Build a user-reviewed WhatsApp enquiry from the contact form.
+(() => {
+  const form = document.querySelector("#enquiry-form");
+  if (!form) return;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const values = new FormData(form);
+    const lines = [
+      "Hello Ashu Catering Service! I'd like to enquire about catering.",
+      "",
+      "Event: " + (values.get("eventType") || "Not specified"),
+      "Preferred date: " + (values.get("eventDate") || "Flexible / not specified"),
+      "Venue / area: " + (values.get("eventLocation") || "Not specified"),
+      "Estimated guests: " + (values.get("guestCount") || "Not specified"),
+      "Menu preferences / dietary needs: " + (values.get("menuNeeds") || "Would like to discuss")
+    ];
+    window.open("https://wa.me/94775878800?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener,noreferrer");
+  });
+})();
