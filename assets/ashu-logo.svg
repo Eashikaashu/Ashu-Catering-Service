@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+<title id="title">Ashu Catering Service logo</title>
+<defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ffb52e"/><stop offset=".48" stop-color="#ff6b62"/><stop offset="1" stop-color="#ec168c"/></linearGradient></defs>
+<path d="M12 79 42 15 Q48 4 55 16 L88 78 Q92 87 83 88 L72 88 Q67 88 64 81 L51 56 Q48 51 44 57 L31 81 Q28 88 20 88 Q7 88 12 79Z" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 67 Q37 52 52 49 Q64 47 67 58 Q70 69 59 73 Q51 76 46 70 Q42 65 47 61 Q52 58 56 62" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
