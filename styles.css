@@ -268,3 +268,23 @@ body.inner-page .site-header .nav-cta:hover {
   background: #e8f7fd;
   color: #075276;
 }
+
+
+/* Homepage brand-first hero headline */
+.hero h1 {
+  max-width: 1120px;
+  font-size: clamp(62px, 8.4vw, 124px);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+}
+.hero-copy {
+  max-width: 650px;
+  font-size: clamp(18px, 1.8vw, 25px);
+  line-height: 1.6;
+  letter-spacing: .035em;
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: clamp(43px, 11vw, 66px); }
+  .hero-copy { font-size: 17px; }
+}
