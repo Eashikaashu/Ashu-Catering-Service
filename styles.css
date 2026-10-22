@@ -398,7 +398,7 @@ body.inner-page .page-lead { color: rgba(255,255,255,.9); max-width: 620px; }
 .page-hero-services { background-image: url("https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=2200&q=88"); }
 .page-hero-menus { background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=2200&q=88"); background-position: center 58%; }
 .page-hero-gallery { background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=88"); }
-.page-hero-contact { background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=88"); }
+.page-hero-contact { background-image: url("https://raw.githubusercontent.com/Eashikaashu/Ashu-Catering-Service/main/Ashu%20Catering%20Photos/Screenshot%202026-10-22%20040556.png"); background-position: center 52%; }
 .service-card .service-photo { border-radius: 3px; }
 .menu-item { position: relative; padding-left: 31px; transition: transform .25s, box-shadow .25s; }
 .menu-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #087fb5; }
