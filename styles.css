@@ -443,8 +443,8 @@ body.inner-page .page-lead { color: rgba(255,255,255,.9); max-width: 620px; }
 
 
 /* Contact page social link below WhatsApp button */
-.contact-facebook-icon { display: flex; align-items: center; gap: 9px; width: fit-content; margin-top: 15px; color: #1877f2; font: 600 13px/1.4 var(--sans); text-decoration: none; transition: color .2s, transform .2s; }
-.contact-facebook-icon svg { display: block; width: 22px; height: 22px; }
+.contact-facebook-icon { display: flex; align-items: center; gap: 8px; width: fit-content; margin-top: 14px; color: #1877f2; font: 600 13px/1.4 var(--sans); text-decoration: none; transition: color .2s, transform .2s; }
+.contact-facebook-icon svg { display: block; width: 20px; height: 20px; flex: 0 0 20px; }
 .contact-facebook-icon:hover { color: #0756b8; transform: translateY(-1px); }
 .contact-facebook-icon:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 3px; }
 
