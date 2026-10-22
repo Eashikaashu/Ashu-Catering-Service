@@ -442,6 +442,12 @@ body.inner-page .page-lead { color: rgba(255,255,255,.9); max-width: 620px; }
 }
 
 
+/* Contact page social link below WhatsApp button */
+.contact-facebook-icon { display: flex; align-items: center; gap: 9px; width: fit-content; margin-top: 15px; color: #1877f2; font: 600 13px/1.4 var(--sans); text-decoration: none; transition: color .2s, transform .2s; }
+.contact-facebook-icon svg { display: block; width: 22px; height: 22px; }
+.contact-facebook-icon:hover { color: #0756b8; transform: translateY(-1px); }
+.contact-facebook-icon:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 3px; }
+
 /* Footer creator credit */
 .site-footer .site-credit { margin: 22px 0 0; color: rgba(255,255,255,.58); font: 10px/1.8 var(--sans); letter-spacing: .04em; }
 .site-credit .credit-heart { display: inline-block; padding: 0 3px; color: #ff5576; font-size: 15px; animation: heart-beat 1.5s ease-in-out infinite; }
