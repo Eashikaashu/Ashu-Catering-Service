@@ -90,9 +90,9 @@ h1 em { color: #b8eaff; }
 .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 27px; }
 .service-photo { width: 100%; aspect-ratio: .94; margin-bottom: 23px; background-size: cover; background-position: center; transition: background-size .3s, filter .3s; }
 .service-card:hover .service-photo { filter: saturate(1.08); }
-.photo-one { background-image: url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=950&q=85"); }
-.photo-two { background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=950&q=85"); }
-.photo-three { background-image: url("https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=950&q=85"); }
+.photo-one { background-image: url("https://www.steamboat.lk/images/site-specific/catering-services/test/new/5-1920x1280px.jpg"); }
+.photo-two { background-image: url("https://static.wixstatic.com/media/f01bdb_d11fa56c949a4b0cad77f07ce7c8e610~mv2.jpeg/v1/fill/w_980,h_653,al_c,q_85/bo7r1863.jpeg"); }
+.photo-three { background-image: url("https://static.wixstatic.com/media/052444_bf981ee37ba342fab7583cd7e4dad0a6~mv2.jpg/v1/crop/x_0,y_0,w_1024,h_929/fill/w_980,h_889,al_c,q_85/unloading.jpg"); }
 .service-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; color: var(--rust); font-size: 9px; letter-spacing: .14em; }
 .service-meta span:last-child { font-size: 16px; }
 .service-card h3 { margin-bottom: 10px; font-family: var(--serif); font-size: clamp(19px, 2vw, 25px); font-weight: 400; }
